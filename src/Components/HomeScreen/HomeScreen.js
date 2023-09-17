@@ -8,9 +8,9 @@ const HomeScreen = () => {
     <div className="container">
       <div className="row">
         <div className="col-md-12 d-flex flex-column align-item-center justify-content-center mt-5">
-          <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" 
-          alt="Google-Icon" 
-          className="mx-auto my-3"
+          <img src="https://play-lh.googleusercontent.com/uhq93AOmKvJwjlrfaNuEaaAT4H089SeF2JZOSLp8xyNghTie1rxD-Vi8wnpip-9PEeY" 
+          alt="anbeshan-icon" 
+          className="mx-auto my-3" style={{height:"150px",width:"150px"}}
           />
           <div className="formDiv col-md-5 mx-auto border my-5 d-flex align-item-center justify-content-between py-1 rounded">
             <i className="fa fa-search mx-3 mt-2"></i>
