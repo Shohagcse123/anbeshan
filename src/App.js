@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { BrowserRouter as Router,Switch, Route } from 'react-router-dom';
 import './App.css';
 import Home from './Components/HomeScreen';
@@ -6,6 +6,7 @@ import SearchScreen from './Components/SearchScreen';
 
 
 function App() {
+  const [searchTerm,setSearchTerm]=useState('');
   return (
     
     <Router>
@@ -13,7 +14,7 @@ function App() {
       <div className="App">
         <Switch>
           <Route exact path={"/"} component={()=><Home/>} />
-          <Route exact path={"/search"} component={()=> <SearchScreen/>}/>
+          <Route exact path={"/search"} component={()=> <SearchScreen searchTerm={searchTerm}/>}/>
         </Switch>
       </div>
     </Router>
