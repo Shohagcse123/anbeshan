@@ -1,8 +1,16 @@
 import React,{useState} from 'react'
 
-const HomeScreen = () => {
+const HomeScreen = ({setSearch}) => {
   //input
   const [input,setInput]= useState('');
+  const handleSubmit=(e)=>{
+    e.preventdefault();
+    if(/^[a-zA-z0-9].*/.test(input) || /^[a-zA-z0-9]+" ".*/.test(input))
+    {
+      setSearch(input);
+    }
+
+  };
 
   return (
     <div className="container">
@@ -14,7 +22,7 @@ const HomeScreen = () => {
           />
           <div className="formDiv col-md-5 mx-auto border my-5 d-flex align-item-center justify-content-between py-1 rounded">
             <i className="fa fa-search mx-3 mt-2"></i>
-            <form style={{width:"100%"}} className="ml-2">
+            <form style={{width:"100%"}} className="ml-2"onSubmit={handleSubmit}>
                 <input type="text" name="" 
                 className="form-control border-0" 
                 value={input} 
