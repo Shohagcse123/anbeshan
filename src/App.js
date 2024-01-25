@@ -1,32 +1,38 @@
 import React, { useState } from 'react';
-import { Switch, Route,useHistory } from 'react-router-dom';
+import { Switch, Route,BrowserRouter as Router } from 'react-router-dom';
 import './App.css';
 import Home from './Components/HomeScreen';
 import SearchScreen from './Components/SearchScreen';
 
 
 
-function App() {
-  const [searchTerm,setSearchTerm]=useState('');
-  const history= useHistory();
-  const setSearch=(term)=>{
-   setSearchTerm (term);
-   history.push('/search');
+
+// function App() {
+//   // const [searchTerm,setSearchTerm]=useState('');
+//   // const history= useHistory();
+//   // const setSearch=(term)=>{
+//   //  setSearchTerm (term);
+//   //  history.push('/search');
   
-  };
-  return (
+//   };
+const App=()=>{
+  const [searchTerm,setSearchTerm]=useState('');
+   return (
     
-   
-      
+    <Router>
       <div className="App">
         <Switch>
-          <Route exact path={"/"} component={()=><Home setSearch={setSearch}/>} />
-          <Route exact path={"/search"} component={()=> <SearchScreen searchTerm={searchTerm}/>}/>
+          <Route exact path= {'/'} component={()=><Home/>}/>
+          <Route exact path={'/search'} component={()=> <SearchScreen searchTerm= {searchTerm} />} />
         </Switch>
+   
+      
       </div>
+    </Router>
   
     
   );
-}
+   }
+
 
 export default App;
