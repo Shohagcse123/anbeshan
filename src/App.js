@@ -16,7 +16,7 @@ import { searchData } from './api/GoogleSearch';
 //   //  history.push('/search');
   
 //   };
-const App=()=>{
+const App=()=>{         
   const history =useHistory();
   const [searchTerm,setSearchTerm]=useState('');
   const setSearch= async(term)=>{
