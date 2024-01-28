@@ -4,7 +4,7 @@ const HomeScreen = ({setSearch}) => {
   //input
   const [input,setInput]= useState('');
   const handleSubmit=(e)=>{
-    e.preventdefault();
+    e.preventDefault();
     if(/^[a-zA-z0-9].*/.test(input) || /^[a-zA-z0-9]+" ".*/.test(input))
     {
       setSearch(input);
