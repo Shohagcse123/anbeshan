@@ -1,5 +1,6 @@
 import React,{useState} from 'react'
 
+
 const HomeScreen = ({setSearch}) => {
   //input
   const [input,setInput]= useState('');
@@ -11,8 +12,20 @@ const HomeScreen = ({setSearch}) => {
     }
 
   };
+  const handleButton=()=>{
+    
+    if(/^[a-zA-z0-9].*/.test(input) || /^[a-zA-z0-9]+" ".*/.test(input))
+    {
+      setSearch(input);
+    }
+
+  };
+  const clearInput=()=>{
+    setInput('');
+  }
 
   return (
+    
     <div className="container">
       <div className="row">
         <div className="col-md-12 d-flex flex-column align-item-center justify-content-center mt-5">
@@ -30,14 +43,15 @@ const HomeScreen = ({setSearch}) => {
                 style={{boxShadow:'none !important',outline:'none'}}
                 />
             </form>
-            {input?<i className="fa fa-times mx-1"></i>:null}
+            <script src="https://kit.fontawesome.com/e1df079133.js" crossorigin="anonymous"></script>
+            {input ?<i className="fa-solid fa-xmark mx-1"style={{cursor:"pointer"}}onClick={clearInput}></i>:null}
             <button type="button" className="btn mx-1" >
               <i className="fa fa-microphone"></i>
             </button>
           </div>
 
           <div className="btns mx-auto text-center">
-              <button type="button" className="btn btn-default mx-1">
+              <button type="button" className="btn btn-default mx-1"onClick={handleButton}>
                 Search
               </button>
               <button type="button" className="btn btn-default mx-1">

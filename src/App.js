@@ -19,10 +19,14 @@ import { searchData } from './api/GoogleSearch';
 const App=()=>{         
   const history =useHistory();
   const [searchTerm,setSearchTerm]=useState('');
+  const [googleData,setGoogleData]=useState({});
+  
   const setSearch= async(term)=>{
     setSearchTerm(term);
-    // history.push('/search');
+    
    const data = await searchData(term);
+   setGoogleData(data);
+    history.push('/search');
     console.log(data);
 
     
