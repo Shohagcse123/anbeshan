@@ -8,17 +8,11 @@ import { searchData } from './api/GoogleSearch';
 
 
 
-// function App() {
-//   // const [searchTerm,setSearchTerm]=useState('');
-//   // const history= useHistory();
-//   // const setSearch=(term)=>{
-//   //  setSearchTerm (term);
-//   //  history.push('/search');
-  
-//   };
+
+
 const App=()=>{         
   const history =useHistory();
-  const [searchTerm,setSearchTerm]=useState('');
+  const [searchTerm,setSearchTerm]=useState('fullyWorld');
   const [googleData,setGoogleData]=useState({});
   
   const setSearch= async(term)=>{
