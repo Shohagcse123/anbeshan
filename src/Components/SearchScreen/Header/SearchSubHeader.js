@@ -15,7 +15,7 @@ const SearchSubHeader = () => {
                     <li className='' >
                         <Link to={'/'} className='flex items-center justify-center no-underline '>
                         
-                        <CiSearch className=''></CiSearch>
+                        <CiSearch className='relative bottom-2'></CiSearch>
                        
                        <p className=''>All</p>
                        
@@ -23,42 +23,50 @@ const SearchSubHeader = () => {
                         </Link>
                         </li>
 
-                        <li className='' >
+                        {/* <li className='' >
                         <Link to={'/'} className='flex items-center justify-center no-underline '>
                         
-                       <FaMapMarkerAlt></FaMapMarkerAlt>
+                       <FaMapMarkerAlt className='relative bottom-2'></FaMapMarkerAlt>
                        
                        <p className=''>Map</p>
                         </Link>
-                        </li>
+                        </li> */}
                       
-                        <li className='' >
+                        {/* <li className='' >
                         <Link to={'/'} className='flex items-center justify-center no-underline '>
                         
-                        <PiVideoFill></PiVideoFill>
+                        <PiVideoFill className='relative bottom-2'></PiVideoFill>
                        
                        <p className=''>Videos</p>
                        
                         
                         </Link>
-                        </li>
+                        </li> */}
 
 
                         <li className='' >
                         <Link to={'/'} className='flex items-center justify-center no-underline '>
                         
-                        <GiNewspaper></GiNewspaper>
+                        <GiNewspaper className='relative bottom-2'></GiNewspaper>
                        
                        <p className=''>News</p>
                        
                         
                         </Link>
                         </li>
+                       
+
+                      
+ 
+         
+
+  
+
 
                         <li className='' >
                         <Link to={'/'} className='flex items-center justify-center no-underline '>
                         
-                        <PiImageSquareFill></PiImageSquareFill>
+                        <PiImageSquareFill className='relative bottom-2'></PiImageSquareFill>
                        
                        <p className=''>Images</p>
                         </Link>
@@ -66,11 +74,13 @@ const SearchSubHeader = () => {
                        
                         <li className='' >
                         <Link to={'/'} className='flex items-center justify-center no-underline '>
-                        <CgDetailsMore></CgDetailsMore>
+                        <CgDetailsMore className='relative bottom-2'></CgDetailsMore>
                        
                        <p className=''>More</p>
                         </Link>
                         </li>
+
+                        
                        
 
 

@@ -5,12 +5,12 @@ const Navbar = () => {
     <div className="col-md-12">
         <nav className="navbar">
             <ul className="nav ml-auto">
-                <li className="nav-item">
+                {/* <li className="nav-item">
                     <a href="/" className="nav-link text-dark" >Gmail</a>
-                </li>
-                <li className="nav-item">
+                </li> */}
+                {/* <li className="nav-item">
                     <a href="/" className="nav-link text-dark">Images</a>
-                </li>
+                </li> */}
                 <li className="nav-item">
                     <a href="/" className="nav-link text-dark">
                         <i className="fa fa-th"></i>

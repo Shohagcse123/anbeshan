@@ -13,7 +13,7 @@ import { searchData } from './api/GoogleSearch';
 const App=()=>{         
   const history =useHistory();
   const [searchTerm,setSearchTerm]=useState('fullyWorld');
-  const [googleData,setGoogleData]=useState({});
+  const [googleData,setGoogleData]=useState([]);
   
   const setSearch= async(term)=>{
     setSearchTerm(term);
@@ -25,13 +25,14 @@ const App=()=>{
 
     
   }
+  console.log('from gooogle data',googleData);
    return (
     
     
       <div className="App">
         <Switch>
           <Route exact path= {'/'} component={()=><Home setSearch={setSearch} />}/>
-          <Route exact path={'/search'} component={()=> <SearchScreen searchTerm= {searchTerm} />} />
+          <Route exact path={'/search'} component={()=> <SearchScreen searchTerm= {searchTerm} googleData={googleData} />} />
         </Switch>
    
       

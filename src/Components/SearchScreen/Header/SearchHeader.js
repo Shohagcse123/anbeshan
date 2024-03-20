@@ -13,9 +13,9 @@ const SearchHeader = ({searchTerm}) => {
     useEffect(()=>{setSearchText (searchTerm)},[searchTerm])
     return (
         <div className='py-2  flex items-center gap-10 md:grid grid-cols-12 '>
-           <Link to={'/'} className="ml-10">
+           {/* <Link to={'/'} className="ml-10">
             <img className='ml-4' src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Google-logo" height='30' />
-           </Link>
+           </Link> */}
            <div className="grid md:grid-cols-8">
             <form className='relative'>
                 <input type="text" name="" value={searchText} onChange={(e)=>setSearchText(e.target.value)} className='border-2 text-black border-black opacity-20 rounded-tl-2xl rounded-br-2xl rounded-tr-2xl rounded-bl-2xl p-2 w-[600px]'  id="" /> 

@@ -54,9 +54,9 @@ const HomeScreen = ({setSearch}) => {
               <button type="button" className="btn btn-default mx-1"onClick={handleButton}>
                 Search
               </button>
-              <button type="button" className="btn btn-default mx-1">
+              {/* <button type="button" className="btn btn-default mx-1">
                 Feeling Lucky
-              </button>
+              </button> */}
           </div>
         </div>
       </div>

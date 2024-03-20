@@ -2,12 +2,15 @@ import React,{useEffect} from 'react'
 import { useHistory } from 'react-router-dom';
 import Header from './Header'
 
+import SearchData from './searchData';
+
+
 const SearchScreen = ({searchTerm,googleData}) => {
   const history= useHistory();
-  console.log(googleData);
+  console.log('Check',googleData);
   
    useEffect(()=>{
-    if(searchTerm === '')
+    if(searchTerm ==='')
     {
       history.push('/');
     }
@@ -21,9 +24,13 @@ const SearchScreen = ({searchTerm,googleData}) => {
     <>
      <Header searchTerm={searchTerm} />
       <div className="container mx-auto">
-        <div className="grid grid-rows-1"></div>
-        <div className="">
-        <h1>Welcome to search page:{searchTerm}</h1>
+        <div className="grid grid-rows-1">
+         <SearchData googleData={googleData}/>
+        <div className='grid md:grid-cols-12'>
+             {/* <h1>Welcome to search page:{searchTerm}</h1> */}
+        </div>
+        
+       
         </div>
       
     </div>
