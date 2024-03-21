@@ -32,7 +32,7 @@ const App=()=>{
       <div className="App">
         <Switch>
           <Route exact path= {'/'} component={()=><Home setSearch={setSearch} />}/>
-          <Route exact path={'/search'} component={()=> <SearchScreen searchTerm= {searchTerm} googleData={googleData} />} />
+          <Route exact path={'/search'} component={()=> <SearchScreen setSearch={setSearch} searchTerm= {searchTerm} googleData={googleData} />} />
         </Switch>
    
       
