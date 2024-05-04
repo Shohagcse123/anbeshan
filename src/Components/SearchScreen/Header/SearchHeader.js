@@ -12,9 +12,17 @@ const SearchHeader = ({ searchTerm, setSearch }) => {
 
   const [searchText, setSearchText] = useState('');
   useEffect(() => { setSearchText(searchTerm) }, [searchTerm])
+  // useEffect(() => {
+  //   const searchKey = localStorage.getItem('searchKey')
+  //   if (searchKey) {
+  //     setSearchText(searchKey);
+  //   }
+  // }, [])
   const handleSubmit = (e) => {
     e.preventDefault();
     if (/^[a-zA-z0-9].*/.test(searchText) || /^[a-zA-z0-9]+" ".*/.test(searchText)) {
+      localStorage.setItem('searchKey', searchText)
+
       setSearch(searchText);
     }
 

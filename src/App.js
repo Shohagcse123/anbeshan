@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Switch, Route, useHistory } from 'react-router-dom';
 import './App.css';
 import Home from './Components/HomeScreen';
@@ -15,7 +15,7 @@ const App = () => {
   const history = useHistory();
   // const { voiceClick, checkClick } = useContext(speakerContext);
 
-  const [searchTerm, setSearchTerm] = useState('fullyWorld');
+  const [searchTerm, setSearchTerm] = useState();
   const [googleData, setGoogleData] = useState([]);
   // const [voiceSearch, setVoiceSearch] = useState(false);
   const setSearch = async (term) => {
@@ -28,6 +28,16 @@ const App = () => {
 
 
   }
+  useEffect(() => {
+    const handleTest = async () => {
+      const searchKey = localStorage.getItem('searchKey')
+      if (searchKey) {
+        const data = await searchData(searchKey);
+        setGoogleData(data);
+      }
+    }
+    handleTest();
+  }, [])
   console.log('from gooogle data', googleData);
 
 

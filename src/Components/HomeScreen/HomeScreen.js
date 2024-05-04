@@ -11,6 +11,7 @@ const HomeScreen = ({ setSearch, openSearch }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (/^[a-zA-z0-9].*/.test(input) || /^[a-zA-z0-9]+" ".*/.test(input)) {
+      localStorage.setItem('searchKey', input)
       setSearch(input);
     }
 
