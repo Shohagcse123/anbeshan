@@ -1,8 +1,8 @@
-import React, { useContext, useState } from 'react'
+import React, { useState } from 'react'
 
 
 
-const HomeScreen = ({ setSearch, openSearch }) => {
+const HomeScreen = ({ setSearch, openVoiceSearch }) => {
   //input
   const [input, setInput] = useState('');
   // Catch Context
@@ -50,18 +50,16 @@ const HomeScreen = ({ setSearch, openSearch }) => {
             </form>
             <script src="https://kit.fontawesome.com/e1df079133.js" crossorigin="anonymous"></script>
             {input ? <i className="fa-solid fa-xmark mx-1" style={{ cursor: "pointer" }} onClick={clearInput}></i> : null}
-            <button type="button" className="btn mx-1" >
+            <button type="button" onClick={() => openVoiceSearch()} className="btn mx-1" >
               <i className="fa fa-microphone"></i>
             </button>
           </div>
 
           <div className="btns mx-auto text-center">
-            <button type="button" className="btn btn-default mx-1" onClick={handleButton}>
+            <button type="button" className="btn btn-default mx-1" onClick={handleButton} >
               Search
             </button>
-            {/* <button type="button" className="btn btn-default mx-1">
-                Feeling Lucky
-              </button> */}
+
           </div>
         </div>
       </div>

@@ -4,7 +4,8 @@ import './App.css';
 import Home from './Components/HomeScreen';
 import SearchScreen from './Components/SearchScreen';
 import { searchData } from './api/GoogleSearch';
-
+import VoiceSearch from './Components/VoiceSearch';
+import { recognition } from "./api/voiceRecognition";
 
 
 
@@ -17,7 +18,7 @@ const App = () => {
 
   const [searchTerm, setSearchTerm] = useState();
   const [googleData, setGoogleData] = useState([]);
-  // const [voiceSearch, setVoiceSearch] = useState(false);
+  const [voiceSearch, setVoiceSearch] = useState(false);
   const setSearch = async (term) => {
     setSearchTerm(term);
 
@@ -27,7 +28,7 @@ const App = () => {
     console.log(data);
 
 
-  }
+  };
   useEffect(() => {
     const handleTest = async () => {
       const searchKey = localStorage.getItem('searchKey')
@@ -39,7 +40,33 @@ const App = () => {
     handleTest();
   }, [])
   console.log('from gooogle data', googleData);
+  // voice search function
+  const openVoiceSearch = () => {
+    setVoiceSearch(true);
+    recognition.start();
+    recognition.onresult = (event) => {
+      const { transcript } = event.results[0][0];
 
+      if (transcript !== null || transcript !== "" || transcript !== " ") {
+        setVoiceSearch(false);
+        console.log('transcript', transcript);
+        localStorage.setItem('searchKey', transcript);
+        setSearch(transcript);
+
+
+
+      }
+      else {
+        setVoiceSearch(false);
+        alert("Please try again for voice search");
+      }
+    }
+  }
+
+  const closeVoiceSearch = () => {
+    setVoiceSearch(false);
+    recognition.stop();
+  }
 
 
   return (
@@ -47,12 +74,13 @@ const App = () => {
 
     <div className="App">
 
-
-
+      {
+        voiceSearch ? (<VoiceSearch closeVoiceSearch={closeVoiceSearch} />) : null
+      }
 
       <Switch>
-        <Route exact path={'/'} component={() => <Home setSearch={setSearch} />} />
-        <Route exact path={'/search'} component={() => <SearchScreen setSearch={setSearch} searchTerm={searchTerm} googleData={googleData} />} />
+        <Route exact path={'/'} component={() => <Home setSearch={setSearch} openVoiceSearch={openVoiceSearch} />} />
+        <Route exact path={'/search'} component={() => <SearchScreen setSearch={setSearch} searchTerm={searchTerm} googleData={googleData} openVoiceSearch={openVoiceSearch} />} />
 
       </Switch>
 
