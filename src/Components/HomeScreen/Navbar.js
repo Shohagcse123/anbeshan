@@ -1,17 +1,17 @@
 import React from 'react'
 
 const Navbar = () => {
-  return (
-    <div className="col-md-12">
-        <nav className="navbar">
-            <ul className="nav ml-auto">
-                {/* <li className="nav-item">
+    return (
+        <div className="col-md-12">
+            <nav className="navbar">
+                <ul className="nav ml-auto">
+                    {/* <li className="nav-item">
                     <a href="/" className="nav-link text-dark" >Gmail</a>
                 </li> */}
-                {/* <li className="nav-item">
+                    {/* <li className="nav-item">
                     <a href="/" className="nav-link text-dark">Images</a>
                 </li> */}
-                <li className="nav-item">
+                    {/* <li className="nav-item">
                     <a href="/" className="nav-link text-dark">
                         <i className="fa fa-th"></i>
                     </a>
@@ -20,11 +20,11 @@ const Navbar = () => {
                     <a href="/" className="nav-link text-dark" >
                         <i className="fa fa-user-o"></i>
                     </a>
-                </li>
-            </ul>
-        </nav>
-    </div>
-  )
+                </li> */}
+                </ul>
+            </nav>
+        </div>
+    )
 }
 
 export default Navbar

@@ -8,87 +8,88 @@ import { CgDetailsMore } from "react-icons/cg";
 import { Link } from 'react-router-dom';
 const SearchSubHeader = () => {
     return (
-        <div className='container'>
-         <div className=" ">
-            <div className="">
-                <ul className='nav flex items-center gap-4'>
-                    <li className='' >
-                        <Link to={'/'} className='flex items-center justify-center no-underline '>
-                        
-                        <CiSearch className='relative bottom-2'></CiSearch>
-                       
-                       <p className=''>All</p>
-                       
-                        
-                        </Link>
-                        </li>
+        <div></div>
+        // <div className='container'>
 
-                        {/* <li className='' >
-                        <Link to={'/'} className='flex items-center justify-center no-underline '>
-                        
-                       <FaMapMarkerAlt className='relative bottom-2'></FaMapMarkerAlt>
-                       
-                       <p className=''>Map</p>
-                        </Link>
-                        </li> */}
-                      
-                        {/* <li className='' >
-                        <Link to={'/'} className='flex items-center justify-center no-underline '>
-                        
-                        <PiVideoFill className='relative bottom-2'></PiVideoFill>
-                       
-                       <p className=''>Videos</p>
-                       
-                        
-                        </Link>
-                        </li> */}
+        //     <div className="">
+        //         <ul className='nav flex items-center gap-4'>
+        //             <li className='' >
+        //                 <Link to={'/'} className='flex items-center justify-center no-underline '>
+
+        //                 <CiSearch className='relative bottom-2'></CiSearch>
+
+        //                <p className=''>All</p>
 
 
-                        <li className='' >
-                        <Link to={'/'} className='flex items-center justify-center no-underline '>
-                        
-                        <GiNewspaper className='relative bottom-2'></GiNewspaper>
-                       
-                       <p className=''>News</p>
-                       
-                        
-                        </Link>
-                        </li>
-                       
+        //                 </Link>
+        //                 </li>
 
-                      
- 
-         
+        //                 {/* <li className='' >
+        //                 <Link to={'/'} className='flex items-center justify-center no-underline '>
 
-  
+        //                <FaMapMarkerAlt className='relative bottom-2'></FaMapMarkerAlt>
 
+        //                <p className=''>Map</p>
+        //                 </Link>
+        //                 </li> */}
 
-                        <li className='' >
-                        <Link to={'/'} className='flex items-center justify-center no-underline '>
-                        
-                        <PiImageSquareFill className='relative bottom-2'></PiImageSquareFill>
-                       
-                       <p className=''>Images</p>
-                        </Link>
-                        </li>
-                       
-                        <li className='' >
-                        <Link to={'/'} className='flex items-center justify-center no-underline '>
-                        <CgDetailsMore className='relative bottom-2'></CgDetailsMore>
-                       
-                       <p className=''>More</p>
-                        </Link>
-                        </li>
+        //                 {/* <li className='' >
+        //                 <Link to={'/'} className='flex items-center justify-center no-underline '>
 
-                        
-                       
+        //                 <PiVideoFill className='relative bottom-2'></PiVideoFill>
+
+        //                <p className=''>Videos</p>
 
 
-                </ul>
-            </div>
-         </div>
-           
-        </div>
+        //                 </Link>
+        //                 </li> */}
+
+
+        //                 <li className='' >
+        //                 <Link to={'/'} className='flex items-center justify-center no-underline '>
+
+        //                 <GiNewspaper className='relative bottom-2'></GiNewspaper>
+
+        //                <p className=''>News</p>
+
+
+        //                 </Link>
+        //                 </li>
+
+
+
+
+
+
+
+
+
+        //                 <li className='' >
+        //                 <Link to={'/'} className='flex items-center justify-center no-underline '>
+
+        //                 <PiImageSquareFill className='relative bottom-2'></PiImageSquareFill>
+
+        //                <p className=''>Images</p>
+        //                 </Link>
+        //                 </li>
+
+        //                 <li className='' >
+        //                 <Link to={'/'} className='flex items-center justify-center no-underline '>
+        //                 <CgDetailsMore className='relative bottom-2'></CgDetailsMore>
+
+        //                <p className=''>More</p>
+        //                 </Link>
+        //                 </li>
+
+
+
+
+
+        //         </ul>
+        //     </div>
+
+
+        // </div>
     );
 };
 
