@@ -35,9 +35,9 @@ const SearchHeader = ({ searchTerm, setSearch, openVoiceSearch }) => {
   return (
     <div className='py-2  flex items-center gap-10 md:grid grid-cols-12 '>
 
-      <div className="grid md:grid-cols-8 mx-16 md:mx-20 lg:mx-[116px]">
+      <div className="grid  md:grid-cols-8 mx-16 md:mx-20 lg:ml-52">
         <form className='relative  lg:ml-32' onSubmit={handleSubmit}>
-          <input type="text" value={searchText} onChange={(e) => setSearchText(e.target.value)} className='border-2 text-black border-black opacity-20  rounded-tl-2xl rounded-br-2xl rounded-tr-2xl rounded-bl-2xl p-2 w-[600px]' id="" />
+          <input type="text" value={searchText} onChange={(e) => setSearchText(e.target.value)} className='border-2 text-black  border-black opacity-20  rounded-tl-2xl rounded-br-2xl rounded-tr-2xl rounded-bl-2xl p-2 w-[600px]' id="" />
           <div className="absolute start-[530px] text-xl bottom-3 flex items-center justify-end gap-1">
             {searchText ? (<FaRegTimesCircle onClick={clearInput} />) : null}
             <CiSearch onClick={handleButton} />
@@ -50,7 +50,7 @@ const SearchHeader = ({ searchTerm, setSearch, openVoiceSearch }) => {
         </form>
 
       </div>
-      <ul className=' flex items-center gap-5  text-xl'>
+      {/* <ul className=' flex items-center gap-5  text-xl'>
         <li className='relative ml-[65rem]'>
           <a href="">
             <IoAppsSharp className='text-black'></IoAppsSharp>
@@ -61,7 +61,7 @@ const SearchHeader = ({ searchTerm, setSearch, openVoiceSearch }) => {
             <FaUser className='text-black'></FaUser>
           </a>
         </li>
-      </ul>
+      </ul> */}
 
 
     </div>
